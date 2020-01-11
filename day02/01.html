@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>事件传播机制</title>
+	<script src="angular/angular.min.js"></script>
+	<script src="js/ng01.js"></script>
+</head>
+<body>
+	
+	<div ng-controller="EventController">
+		<button ng-click="doAdd()">按钮1</button>
+		count={{count}}
+		<hr>
+
+		<div ng-controller="EventController">
+			<button ng-click="doAdd()">按钮2</button>
+			count={{count}}
+			<button ng-click="$emit('MyClick')">上传Emit</button>
+			<button ng-click="$broadcast('MyClick')">下传Broadcast</button>
+			<hr>
+
+			<div ng-controller="EventController">
+				<button ng-click="doAdd()">按钮3</button>
+				count={{count}}
+				<hr>
+			</div>	
+		</div>
+	</div>
+
+
+
+</body>
+</html>

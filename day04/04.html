@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义指令配置：作用域</title>
+	<script src="angular/angular.min.js"></script>
+	<script src="js/ng04.js"></script>
+</head>
+<body ng-controller="DirectiveController">
+	<h2>name:{{name}}</h2>  <!-- 在控制器作用访问，父作用域 -->
+
+	<first></first> <!-- 在指令作用域访问，指令作用域，子作用域 -->
+	<hr>
+
+	<h2>username:{{user.username}}，password:{{user.password}}</h2>
+	
+	<second></second>
+
+</body>
+</html>

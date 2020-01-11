@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://cdn.bootcss.com/angular.js/1.5.0/angular.min.js"></script>
+    <script src="js/ng05.js"></script>
+</head>
+<body>
+
+<hr>
+<h1>hls</h1>
+<div ng-controller="FirstController">
+    <h3 ng-bind="name"></h3>
+    <h3 ng-bind="age"></h3>
+    <div ng-controller="SecondController">
+        <h3 ng-bind="name"></h3>
+        <h3 ng-bind="age"></h3>
+        输出副控制器的name：
+        <h3>{{$parent.name}}</h3>
+    </div>
+
+    对象:
+    <h3 ng-bind="user.name"></h3>
+    <h3 ng-bind="user.sex"></h3>
+    <h3 ng-bind="user.age"></h3>
+</div>
+<hr>
+<div ng-controller="SecondController">
+    <h3 ng-bind="name"></h3>
+</div>
+
+<hr>
+链式：
+<div ng-controller="ThirdController">
+    <h3 ng-bind="sex"></h3>
+</div>
+
+<div ng-controller="FourthController">
+    <h3 ng-bind="sex"></h3>
+</div>
+
+
+
+
+</body>
+</html>

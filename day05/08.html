@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>路由：使用ngView和ngRoute</title>
+	<script src="angular/angular.min.js"></script>
+	<!-- 引入路由模块的脚本文件 -->
+	<script src="angular/angular-route.min.js"></script>
+	<script src="js/ng08.js"></script>
+</head>
+<body ng-controller="RouteController">
+	
+	<a href="#/first">first</a><br>
+	<a href="#/second">second</a><br>
+	<a href="#/third?name=tom&age=21">thrid</a>
+	<a href="#/fourth/alice/180.5/175.8">fourth</a>
+	<hr>
+
+	<ng-view></ng-view>
+</body>
+</html>
