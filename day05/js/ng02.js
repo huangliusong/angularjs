@@ -32,4 +32,18 @@ app.controller('ServiceController', ['$scope','$http', function($scope,$http) {
 		},(resp)=>{
 			console.log(resp.status);
 		});
+
+
+    $http.get('https://www.runoob.com/try/angularjs/data/sites.php')
+        .then((resp) => {
+            console.log(resp.data);
+        }, (resp) => {
+            console.log('请求失败'+resp.status);
+        });
+
+}]);
+
+
+app.controller('ServiceController1', ['$scope', '$http', function ($scope, $http) {
+
 }]);
