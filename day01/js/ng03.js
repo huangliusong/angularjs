@@ -27,3 +27,19 @@ var app=angular.module('myApp',[]);
 app.controller('MyController',['$scope',function(a){
 	a.name='jack';
 }]);
+
+
+app.filter('reverse', function () {
+    return function (data, type) {
+        if (!type) {
+            type = '';
+        }
+        console.log(data);
+        var arr = data.split(type);
+        arr.reverse();
+        var str = arr.join('');
+        return str;
+
+
+    }
+});

@@ -5,6 +5,11 @@ app.controller('FirstController', ['$scope', function($scope){
 	$scope.show=function(){ //在作用域中定义方法
 		console.log('Hello '+$scope.name);
 	};
+
+
+	$scope.Message=function () {
+		alert("hhh")
+    }
 }]);
 
 app.controller('SecondController', ['$scope', function($scope){

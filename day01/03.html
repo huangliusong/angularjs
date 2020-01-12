@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>模块控制器</title>
-	<script src="angular/angular.min.js"></script>
+	<script src="http://cdn.bootcss.com/angular.js/1.5.0/angular.min.js"></script>
 	<script src="js/ng03.js"></script>
 </head>
 <!-- 指定模块中的控制器 -->
@@ -11,5 +11,10 @@
 	<h1>
 		姓名：{{name||"无名氏"}}
 	</h1>
+
+
+	<h3>{{ "huangliusong" | reverse }}</h3>
+	<h3>{{ "huang liusong" | reverse:' ' }}</h3>
+	<h3>{{ "huang,liu,song" | reverse:',' }}</h3>
 </body>
 </html>
